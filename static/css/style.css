@@ -3,7 +3,21 @@ body {
     font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
     background: #fffaf5;
   }
-
+  .side {
+    background-color:#ffd8a8;
+    width:100px;
+    height:300px;
+    text-align:center;
+  }
+  .content {
+    background-color:#ffd8a8;
+    height:300px;
+    text-align:center;
+    margin-left:10px;
+  }
+  article {
+    display:flex;
+  }
   header {
     background: #fff4e6; /* 薄いオレンジ系 */
     border-bottom: 1px solid #f3d9c0;
@@ -90,3 +104,4 @@ body {
       transform: none;
     }
   }
+  
