@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+    background: #fffaf5;
+  }
+
+  header {
+    background: #fff4e6; /* 薄いオレンジ系 */
+    border-bottom: 1px solid #f3d9c0;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;           /* 常に折り返し */
+    gap: 12px 12px;            /* 行・列の間隔 */
+    padding: 0 12px;
+    overflow: visible;         /* 横スクロール無効 */
+    padding-left: calc(12px + env(safe-area-inset-left, 0));
+    padding-right: calc(12px + env(safe-area-inset-right, 0));
+  }
+
+  nav button {
+    padding: 10px 16px;
+    border-radius: 18px;
+    border: none;
+    background: #ffd8a8; /* 穏やかなオレンジ */
+    color: #5a3410;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    box-shadow: inset 0 0 0 1px rgba(90,52,16,0.15);
+    flex: 0 1 auto;            /* 折返しやすくする */
+    font-size: clamp(14px, 2.5vw, 16px);
+    line-height: 1.3;
+    text-align: center;        /* 複数行の中央揃え */
+    white-space: normal;       /* 改行を許可 */
+    overflow-wrap: anywhere;   /* 長文でもはみ出さない */
+    max-width: 100%;
+  }
+
+  nav button:hover {
+    background: #ffc078;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(90,52,16,0.15);
+  }
+
+  nav button:focus-visible {
+    outline: 2px solid #ffa94d;
+    outline-offset: 2px;
+  }
+
+  nav button.active {
+    background: #ffa94d;
+    color: #fff;
+  }
+
+  /* 幅640px以上: 少し余白を拡大 */
+  @media (min-width: 640px) {
+    nav {
+      gap: 14px 14px;
+      padding: 0 16px;
+    }
+    nav button {
+      padding: 10px 18px;
+      font-size: 16px;
+    }
+  }
+
+  /* 幅1024px以上: さらにゆとり */
+  @media (min-width: 1024px) {
+    nav {
+      gap: 16px 16px;
+    }
+    nav button {
+      padding: 10px 22px;
+    }
+  }
+
+  /* 低速端末/低視覚効果設定: アニメーションを抑制 */
+  @media (prefers-reduced-motion: reduce) {
+    nav button {
+      transition: none;
+    }
+    nav button:hover {
+      transform: none;
+    }
+  }
