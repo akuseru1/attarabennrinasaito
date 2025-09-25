@@ -14,12 +14,33 @@
     <div class="content">
       <header>
         <nav>
-          <button class="active"><a href="{{ url_for('index') }}">ホーム</a></button>
-          <button class="active"><a href="{{ url_for('tenki') }}">天気</a></button>
-          <button class="active"><a href="{{ url_for('yotei') }}">予定管理</a></button>
-          <button class="active"><a href="{{ url_for('resipi') }}">レシピ作成・管理</a></button><!-- ← 追加したボタン -->
+          <a class="active" href="{{ url_for('index') }}">ホーム</a>
+          <a class="active" href="{{ url_for('tenki') }}">天気</a>
+          <a class="active" href="{{ url_for('yotei') }}">予定管理</a>
+          <a class="active" href="{{ url_for('resipi') }}">レシピ作成・管理</a>
         </nav>
       </header>
+
+      <div class="main">
+        <section class="hero">
+          <div class="brand">
+            <span class="brand-icon"></span>
+            <span class="brand-text"></span>
+          </div>
+          <form class="search-bar" action="#" method="get" onsubmit="return false;">
+            <div class="search-input">
+              <span class="search-icon">🔍</span>
+              <input type="text" placeholder="  検索欄" />
+            </div>
+            <button type="submit" class="search-button">検索</button>
+          </form>
+        </section>
+
+        <section class="panel panel-a">
+          
+        </section>
+      </div>
+      <div class="bottom-spacer" aria-hidden="true"></div>
     </div>
 </article>
 </body>

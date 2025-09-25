@@ -103,9 +103,27 @@ body {
       transform: none;
     }
   }
-.side {
-    background-color:ffd8a8;
-    width:100px;
-    height:300px;
+  .side {
+    background-color:#ffd8a8;
+    width:220px;
+    flex: 0 0 220px;
+    min-height: 100vh;
+    height: auto;
     text-align:center;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    background-color:#fff4e6;
+    flex: 1 1 auto;
+    min-height: 100vh;
+    text-align:center;
+    margin-left:0;
+  }
+  
+  article {
+    display:flex;
+    align-items: stretch;
+  }
