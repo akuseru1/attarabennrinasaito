@@ -9,23 +9,25 @@
 <body>
 <article>
   <div class="side">
-    <p>サイドバー</p>
+    <h1>💻メリステ</h1>
+    <a class="active" href="{{ url_for('index') }}">👑プレミア会員</a>
   </div>
     <div class="content">
       <header>
         <nav>
-          <a class="active" href="{{ url_for('index') }}">ホーム</a>
-          <a class="active" href="{{ url_for('tenki') }}">天気</a>
-          <a class="active" href="{{ url_for('yotei') }}">予定管理</a>
-          <a class="active" href="{{ url_for('resipi') }}">レシピ作成・管理</a>
+          <a class="active" href="{{ url_for('index') }}">🏠ホーム</a>
+          <a class="active" href="{{ url_for('tenki') }}">⛅️天気</a>
+          <a class="active" href="{{ url_for('yotei') }}">📒予定管理</a>
+          <a class="active" href="{{ url_for('resipi') }}">🥣レシピ作成・管理</a>
         </nav>
       </header>
 
       <div class="main">
         <section class="hero">
           <div class="brand">
-            <span class="brand-icon"></span>
-            <span class="brand-text"></span>
+            <span class="brand-icon">👩‍🍳</span>
+            <span class="brand-text">メリノーティ スティリクス</span>
+            <span class="brand-icon">👩‍🏫</span>
           </div>
           <form class="search-bar" action="#" method="get" onsubmit="return false;">
             <div class="search-input">
@@ -40,7 +42,6 @@
           
         </section>
       </div>
-      <div class="bottom-spacer" aria-hidden="true"></div>
     </div>
 </article>
 </body>
